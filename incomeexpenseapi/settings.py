@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'authentication',
     'expenses',
     'income',
+    'userstats',
 ]
 
 SWAGGER_SETTINGS = {
