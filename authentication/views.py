@@ -123,8 +123,7 @@ class PasswordTokenCheckAPI(generics.GenericAPIView):
             return Response({'success' : True, 'message': 'Credentials Valid', 'uidb64': uidb64, 'token': token}, status=status.HTTP_200_OK)
             
         except DjangoUnicodeDecodeError as identifier:
-            if not PasswordResetTokenGenerator().check_token(user):
-                return Response({'error' : 'Token is not valid, Please request a new one.'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'error' : 'Token is not valid, Please request a new one.'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 
