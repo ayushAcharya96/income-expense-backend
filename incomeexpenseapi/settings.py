@@ -1,5 +1,4 @@
-
-
+from .env import *
 
 
 # Quick-start development settings - unsuitable for production
